@@ -39,13 +39,11 @@ import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import com.example.compose.jetchat.components.JetchatDrawer
 import com.example.compose.jetchat.databinding.ContentMainBinding
-import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 
 /**
  * Main activity for the app.
  */
-@AndroidEntryPoint
 class NavActivity : AppCompatActivity() {
     private val viewModel: MainViewModel by viewModels()
 

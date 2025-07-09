@@ -36,6 +36,4 @@ dependencyResolutionManagement {
 }
 rootProject.name = "Jetchat"
 include(":app")
-include(":core:data")
-include(":core:ui")
 
