@@ -18,6 +18,8 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.compose)
+    alias(libs.plugins.hilt)
+    alias(libs.plugins.kapt)
 }
 
 android {
@@ -87,6 +89,10 @@ dependencies {
     implementation(composeBom)
     androidTestImplementation(composeBom)
 
+    // Core modules
+    implementation(project(":core:data"))
+    implementation(project(":core:ui"))
+
     implementation(libs.androidx.glance.appwidget)
     implementation(libs.androidx.glance.material3)
     implementation(libs.kotlin.stdlib)
@@ -110,6 +116,10 @@ dependencies {
     implementation(libs.androidx.compose.ui.util)
     implementation(libs.androidx.compose.ui.viewbinding)
     implementation(libs.androidx.compose.ui.googlefonts)
+
+    // Hilt
+    implementation(libs.hilt.android)
+    kapt(libs.hilt.compiler)
 
     debugImplementation(libs.androidx.compose.ui.test.manifest)
 
